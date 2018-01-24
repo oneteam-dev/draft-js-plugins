@@ -1,5 +1,5 @@
 .emojiSuggestionsEntry {
-  padding: 5px 10px 1px 10px;
+  padding: 5px 10px;
   transition: background-color 0.4s cubic-bezier(.27,1.27,.48,.56);
 }
 
@@ -20,6 +20,7 @@
   text-overflow: ellipsis;
   max-width: 368px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 
 .emojiSuggestionsEntryIcon {
