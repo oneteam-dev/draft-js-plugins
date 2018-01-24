@@ -19,6 +19,12 @@ emojiList.setPriorityList = (newPriorityList) => {
   emojiList.list = newEmojiListWithOutPriorityList(newPriorityList);
 };
 
+emojiList.ignoreByRegex = (regex) => {
+  emojiList.list = Object.keys(emojiList.list)
+    .filter((colonName) => !regex.test(colonName))
+    .reduce((ret, colonName) => ({ ...ret, [colonName]: emojiList.list[colonName] }), {});
+};
+
 // init emojiList
 const priorityList = {
   ':thumbsup:': ['1f44d'],
