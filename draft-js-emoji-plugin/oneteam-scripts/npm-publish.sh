@@ -15,7 +15,7 @@ TARGET="$SCOPED_PKG@$VERSION"
 
 if [[ $VERSION && -z "$(npm view "${TARGET}" --json)" ]]; then
   echo $TARGET
-  npm i minimist@1.2.0
+  npm i -D minimist@1.2.0
   node ./oneteam-scripts/prepare-packagejson $VERSION
   npm publish --access=public
 fi
