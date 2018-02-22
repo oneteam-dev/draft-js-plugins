@@ -33,6 +33,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "oneteam-patch" ]; then
               echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc
-              cd draft-js-emoji-plugin
               bash ./oneteam-scripts/npm-publish.sh
             fi
